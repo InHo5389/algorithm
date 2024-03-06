@@ -1,4 +1,4 @@
-package datastructure;
+package datastructure.binarytree;
 
 // 배열을 통한 이진 트리 탐색
 class BinaryTree {
