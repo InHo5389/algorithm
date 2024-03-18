@@ -4,20 +4,18 @@ package lv1;
 public class Solution49 {
     public String solution(String[] cards1, String[] cards2, String[] goal) {
         String answer = "Yes";
-        int x = 0;
-        int y = 0;
+        int cardIdx1 = 0;
+        int cardIdx2 = 0;
 
-        int i = 0;
-        while (i<goal.length){
-            if (x<cards1.length && goal[i].equals(cards1[x])){
-                x++;
-            }else if (y<cards2.length && goal[i].equals(cards2[y])){
-                y++;
+        for (int i = 0; i < goal.length; i++) {
+            String target = goal[i];
+            if (cardIdx1<cards1.length && target.equals(cards1[cardIdx1])){
+                cardIdx1++;
+            }else if (cardIdx2<cards2.length && target.equals(cards2[cardIdx2])){
+                cardIdx2++;
             }else {
-                answer="No";
-                break;
+                return "No";
             }
-            i++;
         }
         return answer;
     }
