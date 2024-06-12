@@ -12,6 +12,7 @@ class Person {
     }
 }
 
+// 응급실
 public class Solution3 {
 
     public static int solution(int[] arr, int m) {
