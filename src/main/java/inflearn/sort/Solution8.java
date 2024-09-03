@@ -7,26 +7,32 @@ import java.util.Scanner;
 public class Solution8 {
 
     public static int solution(int m, int[] arr) {
-        Arrays.sort(arr);
         int answer = 0;
+        Arrays.sort(arr);
         int lt = 0, rt = arr.length - 1;
         while (lt <= rt) {
             int mid = (lt + rt) / 2;
-            if (arr[mid] == m) return mid + 1;
-            if (arr[mid] > m) rt = mid - 1;
-            else lt = mid + 1;
+            if (arr[mid] == m) {
+                answer = mid + 1;
+                break;
+            }
+            if (arr[mid] > m) {
+                rt = mid - 1;
+            } else {
+                lt = mid + 1;
+            }
         }
         return answer;
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = sc.nextInt();
+        Scanner kb = new Scanner(System.in);
+        int n = kb.nextInt();
+        int m = kb.nextInt();
         int[] arr = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-        }
-        System.out.println(solution(m,arr));
+        for (int i = 0; i < n; i++) arr[i] = kb.nextInt();
+
+        int solution = solution(m, arr);
+        System.out.println(solution);
     }
 }

@@ -19,6 +19,7 @@ public class Solution9 {
         return cnt;
     }
 
+
     public static int solution(int n, int m, int[] arr) {
         int answer = 0;
         int lt = Arrays.stream(arr).max().getAsInt();

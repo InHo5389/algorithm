@@ -18,6 +18,8 @@ public class Solution10 {
         return cnt;
     }
 
+
+
     public static int solution(int n, int c, int[] arr) {
         int answer = 0;
         Arrays.sort(arr);
